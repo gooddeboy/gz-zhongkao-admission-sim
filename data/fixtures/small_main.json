@@ -1,0 +1,107 @@
+{
+  "params": {
+    "year": 2026,
+    "g1": 720,
+    "delta": 40,
+    "city_line": 600,
+    "trace_level": "full"
+  },
+  "middle_schools": [
+    {"id": 1, "code": "M01", "name": "越秀一中", "district": "越秀区"},
+    {"id": 2, "code": "M02", "name": "天河二中", "district": "天河区"}
+  ],
+  "high_schools": [
+    {"id": 1, "code": "G01", "name": "广雅示范高中", "category": "示范性", "intake_batch": 3, "has_autonomous": 1, "total_plan": 5},
+    {"id": 2, "code": "G02", "name": "执信示范高中", "category": "示范性", "intake_batch": 3, "has_autonomous": 1, "total_plan": 8},
+    {"id": 3, "code": "G03", "name": "培英示范高中", "category": "示范性", "intake_batch": 3, "has_autonomous": 0, "total_plan": 1},
+    {"id": 4, "code": "G04", "name": "海珠非示范高中", "category": "非示范", "intake_batch": 4, "has_autonomous": 0, "total_plan": 4}
+  ],
+  "candidates": [
+    {"id": 1, "candidate_no": "C01", "name": "林晨", "middle_school_id": 1, "score": 735, "tie_seq": 1},
+    {"id": 2, "candidate_no": "C02", "name": "陈曦", "middle_school_id": 1, "score": 728, "tie_seq": 1},
+    {"id": 3, "candidate_no": "C03", "name": "王悦", "middle_school_id": 1, "score": 720, "tie_seq": 1},
+    {"id": 4, "candidate_no": "C04", "name": "李然", "middle_school_id": 1, "score": 719, "tie_seq": 1},
+    {"id": 5, "candidate_no": "C05", "name": "张敏", "middle_school_id": 1, "score": 700, "tie_seq": 1},
+    {"id": 6, "candidate_no": "C06", "name": "刘洋", "middle_school_id": 1, "score": 680, "tie_seq": 1},
+    {"id": 7, "candidate_no": "C07", "name": "赵磊", "middle_school_id": 1, "score": 679, "tie_seq": 1},
+    {"id": 8, "candidate_no": "C08", "name": "周雨", "middle_school_id": 1, "score": 640, "tie_seq": 1},
+    {"id": 9, "candidate_no": "C09", "name": "吴桐", "middle_school_id": 2, "score": 730, "tie_seq": 1},
+    {"id": 10, "candidate_no": "C10", "name": "郑楠", "middle_school_id": 2, "score": 710, "tie_seq": 1},
+    {"id": 11, "candidate_no": "C11", "name": "孙浩", "middle_school_id": 2, "score": 690, "tie_seq": 1},
+    {"id": 12, "candidate_no": "C12", "name": "马琳", "middle_school_id": 2, "score": 660, "tie_seq": 1},
+    {"id": 13, "candidate_no": "C13", "name": "朱峰", "middle_school_id": 2, "score": 639, "tie_seq": 1},
+    {"id": 14, "candidate_no": "C14", "name": "胡月", "middle_school_id": 2, "score": 600, "tie_seq": 1},
+    {"id": 15, "candidate_no": "C15", "name": "郭凯", "middle_school_id": 2, "score": 599, "tie_seq": 1},
+    {"id": 16, "candidate_no": "C16", "name": "何静", "middle_school_id": 2, "score": 720, "tie_seq": 2},
+    {"id": 17, "candidate_no": "C17", "name": "罗晴", "middle_school_id": 2, "score": 740, "tie_seq": 1}
+  ],
+  "plans": [
+    {"id": 1, "high_school_id": 1, "batch": 1, "category": "自主招生", "initial_quota": 1, "control_line": 600, "middle_school_id": null, "note": "广雅自招"},
+    {"id": 2, "high_school_id": 1, "batch": 2, "category": "名额分配", "initial_quota": 2, "control_line": 600, "middle_school_id": 1, "note": "广雅→越秀一中"},
+    {"id": 3, "high_school_id": 1, "batch": 2, "category": "名额分配", "initial_quota": 1, "control_line": 600, "middle_school_id": 2, "note": "广雅→天河二中"},
+    {"id": 4, "high_school_id": 1, "batch": 3, "category": "统招", "initial_quota": 1, "control_line": 600, "middle_school_id": null, "note": "广雅统招"},
+    {"id": 5, "high_school_id": 2, "batch": 1, "category": "自主招生", "initial_quota": 3, "control_line": 600, "middle_school_id": null, "note": "执信自招"},
+    {"id": 6, "high_school_id": 2, "batch": 2, "category": "名额分配", "initial_quota": 2, "control_line": 600, "middle_school_id": 1, "note": "执信→越秀一中"},
+    {"id": 7, "high_school_id": 2, "batch": 2, "category": "名额分配", "initial_quota": 1, "control_line": 600, "middle_school_id": 2, "note": "执信→天河二中"},
+    {"id": 8, "high_school_id": 2, "batch": 3, "category": "统招", "initial_quota": 2, "control_line": 600, "middle_school_id": null, "note": "执信统招"},
+    {"id": 9, "high_school_id": 3, "batch": 3, "category": "统招", "initial_quota": 1, "control_line": 600, "middle_school_id": null, "note": "培英统招"},
+    {"id": 10, "high_school_id": 4, "batch": 4, "category": "统招", "initial_quota": 4, "control_line": 600, "middle_school_id": null, "note": "海珠统招"}
+  ],
+  "qualifications": [
+    {"candidate_id": 1, "high_school_id": 1, "status": "qualified", "rank": 1},
+    {"candidate_id": 4, "high_school_id": 1, "status": "qualified", "rank": 2},
+    {"candidate_id": 8, "high_school_id": 1, "status": "qualified", "rank": 3},
+    {"candidate_id": 15, "high_school_id": 1, "status": "qualified", "rank": 4},
+    {"candidate_id": 2, "high_school_id": 2, "status": "qualified", "rank": 1},
+    {"candidate_id": 9, "high_school_id": 2, "status": "qualified", "rank": 2},
+    {"candidate_id": 17, "high_school_id": 2, "status": "qualified", "rank": 3},
+    {"candidate_id": 11, "high_school_id": 2, "status": "disqualified", "rank": null}
+  ],
+  "volunteers": [
+    {"candidate_id": 1, "batch": 1, "seq": 1, "high_school_id": 1},
+    {"candidate_id": 3, "batch": 1, "seq": 1, "high_school_id": 1},
+    {"candidate_id": 4, "batch": 1, "seq": 1, "high_school_id": 1},
+    {"candidate_id": 15, "batch": 1, "seq": 1, "high_school_id": 1},
+    {"candidate_id": 2, "batch": 1, "seq": 1, "high_school_id": 2},
+    {"candidate_id": 9, "batch": 1, "seq": 1, "high_school_id": 2},
+    {"candidate_id": 11, "batch": 1, "seq": 1, "high_school_id": 2},
+
+    {"candidate_id": 4, "batch": 2, "seq": 1, "high_school_id": 1},
+    {"candidate_id": 4, "batch": 2, "seq": 2, "high_school_id": 2},
+    {"candidate_id": 5, "batch": 2, "seq": 1, "high_school_id": 2},
+    {"candidate_id": 5, "batch": 2, "seq": 2, "high_school_id": 1},
+    {"candidate_id": 6, "batch": 2, "seq": 1, "high_school_id": 1},
+    {"candidate_id": 7, "batch": 2, "seq": 1, "high_school_id": 1},
+    {"candidate_id": 8, "batch": 2, "seq": 1, "high_school_id": 1},
+
+    {"candidate_id": 10, "batch": 2, "seq": 1, "high_school_id": 1},
+    {"candidate_id": 10, "batch": 2, "seq": 2, "high_school_id": 2},
+    {"candidate_id": 11, "batch": 2, "seq": 1, "high_school_id": 1},
+    {"candidate_id": 12, "batch": 2, "seq": 1, "high_school_id": 2},
+    {"candidate_id": 12, "batch": 2, "seq": 2, "high_school_id": 1},
+    {"candidate_id": 13, "batch": 2, "seq": 1, "high_school_id": 1},
+    {"candidate_id": 14, "batch": 2, "seq": 1, "high_school_id": 2},
+    {"candidate_id": 15, "batch": 2, "seq": 1, "high_school_id": 1},
+    {"candidate_id": 16, "batch": 2, "seq": 1, "high_school_id": 1},
+    {"candidate_id": 16, "batch": 2, "seq": 2, "high_school_id": 2},
+
+    {"candidate_id": 3, "batch": 3, "seq": 1, "high_school_id": 3},
+    {"candidate_id": 3, "batch": 3, "seq": 2, "high_school_id": 1},
+    {"candidate_id": 7, "batch": 3, "seq": 1, "high_school_id": 1},
+    {"candidate_id": 7, "batch": 3, "seq": 2, "high_school_id": 2},
+    {"candidate_id": 8, "batch": 3, "seq": 1, "high_school_id": 2},
+    {"candidate_id": 8, "batch": 3, "seq": 2, "high_school_id": 1},
+    {"candidate_id": 11, "batch": 3, "seq": 1, "high_school_id": 2},
+    {"candidate_id": 12, "batch": 3, "seq": 1, "high_school_id": 1},
+    {"candidate_id": 12, "batch": 3, "seq": 2, "high_school_id": 2},
+    {"candidate_id": 13, "batch": 3, "seq": 1, "high_school_id": 2},
+    {"candidate_id": 13, "batch": 3, "seq": 2, "high_school_id": 3},
+    {"candidate_id": 14, "batch": 3, "seq": 1, "high_school_id": 2},
+    {"candidate_id": 14, "batch": 3, "seq": 2, "high_school_id": 3},
+    {"candidate_id": 17, "batch": 3, "seq": 1, "high_school_id": 3},
+
+    {"candidate_id": 13, "batch": 4, "seq": 1, "high_school_id": 4},
+    {"candidate_id": 14, "batch": 4, "seq": 1, "high_school_id": 4},
+    {"candidate_id": 15, "batch": 4, "seq": 1, "high_school_id": 4}
+  ]
+}
