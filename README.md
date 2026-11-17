@@ -28,6 +28,8 @@ python -m pip install -r requirements.txt
 python run.py
 ```
 
+Windows 用户也可以直接双击项目根目录的 **`启动系统.bat`**：保持弹出的命令行窗口打开，然后在浏览器访问 <http://127.0.0.1:8000>。关闭窗口即停止服务。
+
 浏览器打开 <http://127.0.0.1:8000>。
 
 首次使用建议：
