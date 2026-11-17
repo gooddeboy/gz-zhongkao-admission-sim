@@ -1,0 +1,15 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+env/
+data/admission.db
+data/admission.db-*
+data/snapshots/*.json.gz
+docs/_preview/
+*.log
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
