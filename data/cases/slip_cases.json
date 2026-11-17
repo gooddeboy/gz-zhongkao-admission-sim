@@ -1,0 +1,153 @@
+{
+  "cases": [
+    {
+      "key": "batch_slip",
+      "title": "案例一：某批次未录取（第三批滑档，第四批被录取）",
+      "description": "C1 总分 700，第三批第一志愿报 H2、第二志愿报 H1；同梯度的 C2 仅 690 分但第一志愿报 H1，先占满 H1；C1 的第一志愿 H2 又被 715 分的 C3 占满，因此 C1 第三批落选，直到第四批才被 H3 录取。只把 C1 的第三批志愿顺序调整为 H1 在前，C1 即可在第三批被 H1 录取，验证志愿顺序调整能避免该批次滑档。",
+      "focus_candidate_no": "C1",
+      "baseline": {
+        "params": {"year": 2026, "g1": 720, "delta": 40, "city_line": 600, "trace_level": "full"},
+        "middle_schools": [
+          {"id": 1, "code": "M01", "name": "越秀一中", "district": "越秀区"},
+          {"id": 2, "code": "M02", "name": "天河二中", "district": "天河区"}
+        ],
+        "high_schools": [
+          {"id": 1, "code": "G01", "name": "广雅示范高中", "category": "示范性", "intake_batch": 3, "has_autonomous": 0, "total_plan": 1},
+          {"id": 2, "code": "G02", "name": "执信示范高中", "category": "示范性", "intake_batch": 3, "has_autonomous": 0, "total_plan": 1},
+          {"id": 3, "code": "G03", "name": "海珠非示范高中", "category": "非示范", "intake_batch": 4, "has_autonomous": 0, "total_plan": 2}
+        ],
+        "candidates": [
+          {"id": 1, "candidate_no": "C1", "name": "高分滑档生", "middle_school_id": 1, "score": 700, "tie_seq": 1},
+          {"id": 2, "candidate_no": "C2", "name": "志愿优先生", "middle_school_id": 1, "score": 690, "tie_seq": 1},
+          {"id": 3, "candidate_no": "C3", "name": "第一志愿高分生", "middle_school_id": 2, "score": 715, "tie_seq": 1},
+          {"id": 4, "candidate_no": "C4", "name": "第四批考生甲", "middle_school_id": 1, "score": 650, "tie_seq": 1},
+          {"id": 5, "candidate_no": "C5", "name": "第四批考生乙", "middle_school_id": 2, "score": 640, "tie_seq": 1},
+          {"id": 6, "candidate_no": "C6", "name": "未填志愿生", "middle_school_id": 2, "score": 730, "tie_seq": 1}
+        ],
+        "plans": [
+          {"id": 1, "high_school_id": 1, "batch": 3, "category": "统招", "initial_quota": 1, "control_line": 600, "middle_school_id": null, "note": "H1 统招 1 人"},
+          {"id": 2, "high_school_id": 2, "batch": 3, "category": "统招", "initial_quota": 1, "control_line": 600, "middle_school_id": null, "note": "H2 统招 1 人"},
+          {"id": 3, "high_school_id": 3, "batch": 4, "category": "统招", "initial_quota": 2, "control_line": 600, "middle_school_id": null, "note": "H3 统招 2 人"}
+        ],
+        "qualifications": [],
+        "volunteers": [
+          {"candidate_id": 1, "batch": 3, "seq": 1, "high_school_id": 2},
+          {"candidate_id": 1, "batch": 3, "seq": 2, "high_school_id": 1},
+          {"candidate_id": 1, "batch": 4, "seq": 1, "high_school_id": 3},
+          {"candidate_id": 2, "batch": 3, "seq": 1, "high_school_id": 1},
+          {"candidate_id": 3, "batch": 3, "seq": 1, "high_school_id": 2},
+          {"candidate_id": 4, "batch": 4, "seq": 1, "high_school_id": 3},
+          {"candidate_id": 5, "batch": 4, "seq": 1, "high_school_id": 3}
+        ]
+      },
+      "adjusted": {
+        "params": {"year": 2026, "g1": 720, "delta": 40, "city_line": 600, "trace_level": "full"},
+        "middle_schools": [
+          {"id": 1, "code": "M01", "name": "越秀一中", "district": "越秀区"},
+          {"id": 2, "code": "M02", "name": "天河二中", "district": "天河区"}
+        ],
+        "high_schools": [
+          {"id": 1, "code": "G01", "name": "广雅示范高中", "category": "示范性", "intake_batch": 3, "has_autonomous": 0, "total_plan": 1},
+          {"id": 2, "code": "G02", "name": "执信示范高中", "category": "示范性", "intake_batch": 3, "has_autonomous": 0, "total_plan": 1},
+          {"id": 3, "code": "G03", "name": "海珠非示范高中", "category": "非示范", "intake_batch": 4, "has_autonomous": 0, "total_plan": 2}
+        ],
+        "candidates": [
+          {"id": 1, "candidate_no": "C1", "name": "高分滑档生", "middle_school_id": 1, "score": 700, "tie_seq": 1},
+          {"id": 2, "candidate_no": "C2", "name": "志愿优先生", "middle_school_id": 1, "score": 690, "tie_seq": 1},
+          {"id": 3, "candidate_no": "C3", "name": "第一志愿高分生", "middle_school_id": 2, "score": 715, "tie_seq": 1},
+          {"id": 4, "candidate_no": "C4", "name": "第四批考生甲", "middle_school_id": 1, "score": 650, "tie_seq": 1},
+          {"id": 5, "candidate_no": "C5", "name": "第四批考生乙", "middle_school_id": 2, "score": 640, "tie_seq": 1},
+          {"id": 6, "candidate_no": "C6", "name": "未填志愿生", "middle_school_id": 2, "score": 730, "tie_seq": 1}
+        ],
+        "plans": [
+          {"id": 1, "high_school_id": 1, "batch": 3, "category": "统招", "initial_quota": 1, "control_line": 600, "middle_school_id": null, "note": "H1 统招 1 人"},
+          {"id": 2, "high_school_id": 2, "batch": 3, "category": "统招", "initial_quota": 1, "control_line": 600, "middle_school_id": null, "note": "H2 统招 1 人"},
+          {"id": 3, "high_school_id": 3, "batch": 4, "category": "统招", "initial_quota": 2, "control_line": 600, "middle_school_id": null, "note": "H3 统招 2 人"}
+        ],
+        "qualifications": [],
+        "volunteers": [
+          {"candidate_id": 1, "batch": 3, "seq": 1, "high_school_id": 1},
+          {"candidate_id": 1, "batch": 3, "seq": 2, "high_school_id": 2},
+          {"candidate_id": 1, "batch": 4, "seq": 1, "high_school_id": 3},
+          {"candidate_id": 2, "batch": 3, "seq": 1, "high_school_id": 1},
+          {"candidate_id": 3, "batch": 3, "seq": 1, "high_school_id": 2},
+          {"candidate_id": 4, "batch": 4, "seq": 1, "high_school_id": 3},
+          {"candidate_id": 5, "batch": 4, "seq": 1, "high_school_id": 3}
+        ]
+      }
+    },
+    {
+      "key": "all_batches_slip",
+      "title": "案例二：全部批次结束后仍未录取",
+      "description": "C1 总分 710，第三批只填了两所热门高中：第一志愿 H2、第二志愿 H1，且没有填第四批保底志愿。H2 被 720 分的 C3 以第一志愿占满，H1 被同梯度但第一志愿报 H1 的 C2 占满，C1 两个志愿均落空；第四批又没有志愿，最终全部批次结束仍未录取。只给 C1 增加第四批 H3 志愿，C1 即可被 H3 录取，验证保底志愿能避免全批次滑档。",
+      "focus_candidate_no": "C1",
+      "baseline": {
+        "params": {"year": 2026, "g1": 720, "delta": 40, "city_line": 600, "trace_level": "full"},
+        "middle_schools": [
+          {"id": 1, "code": "M01", "name": "越秀一中", "district": "越秀区"},
+          {"id": 2, "code": "M02", "name": "天河二中", "district": "天河区"}
+        ],
+        "high_schools": [
+          {"id": 1, "code": "G01", "name": "广雅示范高中", "category": "示范性", "intake_batch": 3, "has_autonomous": 0, "total_plan": 1},
+          {"id": 2, "code": "G02", "name": "执信示范高中", "category": "示范性", "intake_batch": 3, "has_autonomous": 0, "total_plan": 1},
+          {"id": 3, "code": "G03", "name": "海珠非示范高中", "category": "非示范", "intake_batch": 4, "has_autonomous": 0, "total_plan": 1}
+        ],
+        "candidates": [
+          {"id": 1, "candidate_no": "C1", "name": "全批次滑档生", "middle_school_id": 1, "score": 710, "tie_seq": 1},
+          {"id": 2, "candidate_no": "C2", "name": "第一志愿占位生", "middle_school_id": 1, "score": 690, "tie_seq": 1},
+          {"id": 3, "candidate_no": "C3", "name": "高梯度第一志愿生", "middle_school_id": 2, "score": 720, "tie_seq": 1},
+          {"id": 4, "candidate_no": "C4", "name": "第四批考生甲", "middle_school_id": 2, "score": 680, "tie_seq": 1},
+          {"id": 5, "candidate_no": "C5", "name": "第四批考生乙", "middle_school_id": 1, "score": 650, "tie_seq": 1}
+        ],
+        "plans": [
+          {"id": 1, "high_school_id": 1, "batch": 3, "category": "统招", "initial_quota": 1, "control_line": 600, "middle_school_id": null, "note": "H1 统招 1 人"},
+          {"id": 2, "high_school_id": 2, "batch": 3, "category": "统招", "initial_quota": 1, "control_line": 600, "middle_school_id": null, "note": "H2 统招 1 人"},
+          {"id": 3, "high_school_id": 3, "batch": 4, "category": "统招", "initial_quota": 1, "control_line": 600, "middle_school_id": null, "note": "H3 统招 1 人"}
+        ],
+        "qualifications": [],
+        "volunteers": [
+          {"candidate_id": 1, "batch": 3, "seq": 1, "high_school_id": 2},
+          {"candidate_id": 1, "batch": 3, "seq": 2, "high_school_id": 1},
+          {"candidate_id": 2, "batch": 3, "seq": 1, "high_school_id": 1},
+          {"candidate_id": 3, "batch": 3, "seq": 1, "high_school_id": 2},
+          {"candidate_id": 4, "batch": 4, "seq": 1, "high_school_id": 3},
+          {"candidate_id": 5, "batch": 4, "seq": 1, "high_school_id": 3}
+        ]
+      },
+      "adjusted": {
+        "params": {"year": 2026, "g1": 720, "delta": 40, "city_line": 600, "trace_level": "full"},
+        "middle_schools": [
+          {"id": 1, "code": "M01", "name": "越秀一中", "district": "越秀区"},
+          {"id": 2, "code": "M02", "name": "天河二中", "district": "天河区"}
+        ],
+        "high_schools": [
+          {"id": 1, "code": "G01", "name": "广雅示范高中", "category": "示范性", "intake_batch": 3, "has_autonomous": 0, "total_plan": 1},
+          {"id": 2, "code": "G02", "name": "执信示范高中", "category": "示范性", "intake_batch": 3, "has_autonomous": 0, "total_plan": 1},
+          {"id": 3, "code": "G03", "name": "海珠非示范高中", "category": "非示范", "intake_batch": 4, "has_autonomous": 0, "total_plan": 1}
+        ],
+        "candidates": [
+          {"id": 1, "candidate_no": "C1", "name": "全批次滑档生", "middle_school_id": 1, "score": 710, "tie_seq": 1},
+          {"id": 2, "candidate_no": "C2", "name": "第一志愿占位生", "middle_school_id": 1, "score": 690, "tie_seq": 1},
+          {"id": 3, "candidate_no": "C3", "name": "高梯度第一志愿生", "middle_school_id": 2, "score": 720, "tie_seq": 1},
+          {"id": 4, "candidate_no": "C4", "name": "第四批考生甲", "middle_school_id": 2, "score": 680, "tie_seq": 1},
+          {"id": 5, "candidate_no": "C5", "name": "第四批考生乙", "middle_school_id": 1, "score": 650, "tie_seq": 1}
+        ],
+        "plans": [
+          {"id": 1, "high_school_id": 1, "batch": 3, "category": "统招", "initial_quota": 1, "control_line": 600, "middle_school_id": null, "note": "H1 统招 1 人"},
+          {"id": 2, "high_school_id": 2, "batch": 3, "category": "统招", "initial_quota": 1, "control_line": 600, "middle_school_id": null, "note": "H2 统招 1 人"},
+          {"id": 3, "high_school_id": 3, "batch": 4, "category": "统招", "initial_quota": 1, "control_line": 600, "middle_school_id": null, "note": "H3 统招 1 人"}
+        ],
+        "qualifications": [],
+        "volunteers": [
+          {"candidate_id": 1, "batch": 3, "seq": 1, "high_school_id": 2},
+          {"candidate_id": 1, "batch": 3, "seq": 2, "high_school_id": 1},
+          {"candidate_id": 1, "batch": 4, "seq": 1, "high_school_id": 3},
+          {"candidate_id": 2, "batch": 3, "seq": 1, "high_school_id": 1},
+          {"candidate_id": 3, "batch": 3, "seq": 1, "high_school_id": 2},
+          {"candidate_id": 4, "batch": 4, "seq": 1, "high_school_id": 3},
+          {"candidate_id": 5, "batch": 4, "seq": 1, "high_school_id": 3}
+        ]
+      }
+    }
+  ]
+}

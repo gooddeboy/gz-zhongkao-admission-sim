@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>简化广州中考公办高中录取模拟系统</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-mark">录</div>
+        <div class="brand-text">
+          <strong>中考录取模拟</strong>
+          <span>广州公办高中 · 课程设计</span>
+        </div>
+      </div>
+      <nav class="nav">
+        <a class="nav-item" href="#/overview" data-route="overview">
+          <svg viewBox="0 0 24 24"><path d="M4 13h6V4H4v9zm0 7h6v-5H4v5zm10 0h6v-9h-6v9zm0-16v5h6V4h-6z"/></svg>
+          <span>概览</span>
+        </a>
+        <a class="nav-item" href="#/data" data-route="data">
+          <svg viewBox="0 0 24 24"><path d="M4 5h16v4H4V5zm0 6h16v4H4v-4zm0 6h16v2H4v-2z"/></svg>
+          <span>数据管理</span>
+        </a>
+        <a class="nav-item" href="#/runs" data-route="runs">
+          <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7L8 5z"/></svg>
+          <span>投档执行</span>
+        </a>
+        <a class="nav-item" href="#/results" data-route="results">
+          <svg viewBox="0 0 24 24"><path d="M10 4a6 6 0 104.47 10.03l4.25 4.25 1.41-1.41-4.25-4.25A6 6 0 0010 4zm0 2a4 4 0 110 8 4 4 0 010-8z"/></svg>
+          <span>结果查询</span>
+        </a>
+        <a class="nav-item" href="#/stats" data-route="stats">
+          <svg viewBox="0 0 24 24"><path d="M5 19h14v2H3V3h2v16zm3-2V9h2v8H8zm4 0V5h2v12h-2zm4 0v-6h2v6h-2z"/></svg>
+          <span>统计分析</span>
+        </a>
+        <a class="nav-item" href="#/cases" data-route="cases">
+          <svg viewBox="0 0 24 24"><path d="M12 2l3 6 6 .9-4.5 4.3 1.1 6.1L12 16.4 6.4 19.3l1.1-6.1L3 8.9 9 8l3-6z"/></svg>
+          <span>滑档案例</span>
+        </a>
+        <a class="nav-item" href="#/help" data-route="help">
+          <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm1 15h-2v-2h2v2zm1.8-6.3l-.9.9c-.7.7-1 1.2-1 2.4h-2c0-1.6.5-2.3 1.4-3.2l1.2-1.2c.3-.3.5-.8.5-1.3a2 2 0 10-4 0H7a4 4 0 118 0c0 .9-.4 1.7-1.2 2.4z"/></svg>
+          <span>帮助与规则</span>
+        </a>
+      </nav>
+      <div class="sidebar-foot">
+        <div class="dot-line"><span class="dot ok"></span><span>本地 SQLite · 可离线运行</span></div>
+        <a href="/docs" target="_blank" rel="noreferrer">REST API 文档 ↗</a>
+      </div>
+    </aside>
+
+    <div class="main">
+      <header class="topbar">
+        <div class="crumb" id="crumb">概览</div>
+        <div class="top-actions">
+          <span class="badge badge-muted" id="dataset-badge">数据加载中</span>
+          <a class="btn btn-ghost btn-sm" href="/docs" target="_blank" rel="noreferrer">API</a>
+        </div>
+      </header>
+      <main id="view" class="view">
+        <div class="loading">正在加载系统数据…</div>
+      </main>
+    </div>
+  </div>
+
+  <div id="modal-root"></div>
+  <div id="toast-root" class="toast-root"></div>
+  <div id="overlay" class="overlay hidden"><div class="spinner"></div><div id="overlay-text">处理中…</div></div>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
